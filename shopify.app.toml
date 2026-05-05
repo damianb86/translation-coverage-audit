@@ -1,6 +1,6 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "ccdaa6d0f35a3bd7fee1297a696cc660"
+client_id = "26916143b3d7fbd05401bb4955ab981a"
 application_url = "https://example.com"
 embedded = true
 name = "Translation Coverage Audit"
