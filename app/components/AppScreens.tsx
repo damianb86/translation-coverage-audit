@@ -240,9 +240,9 @@ function DataTable({ rows }: { rows: DashboardData["rows"] }) {
         <thead>
           <tr>
             <th scope="col">Item</th>
-            <th scope="col">Signal</th>
+            <th scope="col">Locale</th>
+            <th scope="col">Status</th>
             <th scope="col">Priority</th>
-            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -250,7 +250,7 @@ function DataTable({ rows }: { rows: DashboardData["rows"] }) {
             <tr key={row.id}>
               <td>{row.name}</td>
               <td>{row.signal}</td>
-              <td><s-badge tone={row.priority === "High" ? "critical" : row.priority === "Medium" ? "warning" : "info"}>{row.priority}</s-badge></td>
+              <td><s-badge tone={row.priority === "Missing" ? "critical" : row.priority === "Outdated" ? "warning" : "info"}>{row.priority}</s-badge></td>
               <td>{row.action}</td>
             </tr>
           ))}

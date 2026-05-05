@@ -16,6 +16,9 @@ describe("Shopify GraphQL helpers", () => {
   });
 
   it("detects missing scopes", () => {
-    expect(hasMissingScope(["read_products"], ["read_products","read_translations"])).toContain("read_translations");
+    const requiredScopes = ["read_products","read_translations"];
+
+    expect(hasMissingScope([], requiredScopes)).toEqual(requiredScopes);
+    expect(hasMissingScope(requiredScopes, requiredScopes)).toEqual([]);
   });
 });
